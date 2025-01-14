@@ -1,0 +1,11 @@
+# Sauvegarde différentielle tous les jours à 2h du matin (lundi à samedi)
+0 2 * * 1-6 /home/schawil/Sauvegardes/script_sauvegarde_diff.sh
+
+# Sauvegarde complète chaque dimanche à 3h du matin
+0 3 * * 0 /home/schawil/Sauvegardes/script_sauvegarde_full.sh
+
+# Sauvegarde complète mensuelle le 1er du mois à 4h du matin
+0 4 1 * * /home/schawil/Sauvegardes/script_sauvegarde_full.sh
+
+# Nettoyage des anciennes sauvegardes chaque lundi à 5h du matin
+0 5 * * 1 /home/schawil/Sauvegardes/script_nettoyage_backup.sh
